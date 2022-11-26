@@ -1,19 +1,18 @@
-const listOfItems = document.querySelectorAll('.item'); // рахуємо кількість items
+const listOfItems = document.querySelectorAll('.item');          // рахуємо кількість items
 console.log('Number of categories: ', listOfItems.length);
 
 // Покращений варіант через стрілку
 
-const allElOfItems = listOfItems.forEach(el=> {
-
-    console.log('Category: ', el.querySelector('h2').textContent); // через textContent виводимо заголовок
-    console.log('Elements: ', el.querySelectorAll('li').length);   // рахуємо кількість elemens
-}     );
+const allElOfItems = listOfItems.forEach(el => {
+  console.log('Category: ', el.querySelector('h2').textContent); // шукаємо і виводимо заголовок
+  console.log('Elements: ', el.querySelectorAll('li').length);   // шукаємо і рахуємо кількість elemens
+});
 
 // Через форОф
 
 // for (const list of listOfItems) {
-//     console.log('Category: ', list.querySelector('h2').textContent); 
-//     console.log('Elements: ', list.querySelectorAll('li').length); 
+//     console.log('Category: ', list.querySelector('h2').textContent);
+//     console.log('Elements: ', list.querySelectorAll('li').length);
 // }
 
 // Завдання №1
