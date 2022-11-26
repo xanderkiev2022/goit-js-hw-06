@@ -16,12 +16,12 @@ const images = [
 const galleryEl = document.querySelector('.gallery');     // шукаємо gallery
 
 const createGallery = images.reduce((acc, image) => {     // перебираємо масив фото
-  let string = `<li><img class="gallery-item" src="${image.url}" alt=${image.alt}></li>`; // заповнюємо шаблонними рядками галерею
+  let string = `<li class="gallery-item"><img class="gallery-img" src="${image.url}" alt=${image.alt}></li>`; // заповнюємо шаблонними рядками галерею
   return acc + string;                                    // робимо один рядок html
 }, '');
 
 galleryEl.insertAdjacentHTML(                             // вставляємо масим фото
-  'afterend',                                             // вибираємо місце розгортування
+  'beforeend',                                            // вибираємо місце розгортування
   createGallery                                           // вибираємо об"єкт розгортування
 );
 
